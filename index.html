@@ -1,1 +1,166 @@
-init
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3 az 1-ben tesztcsík színskála</title>
+<style>
+  :root{
+    --ink:#1d2a2e;
+    --paper:#eef3f4;
+    --card:#ffffff;
+    --muted:#5c6f74;
+    --ok:#1f7a4d;
+    --line:#d5dfe1;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    padding:16px 14px 40px;
+    max-width:520px;
+    margin:0 auto;
+  }
+  header{margin-bottom:14px}
+  h1{font-size:1.15rem;font-weight:700;letter-spacing:.01em}
+  header p{font-size:.8rem;color:var(--muted);margin-top:4px;line-height:1.45}
+
+  .howto{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:12px 14px;
+    font-size:.8rem;
+    color:var(--muted);
+    line-height:1.5;
+    margin-bottom:18px;
+  }
+  .howto b{color:var(--ink)}
+
+  section{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:14px;
+    margin-bottom:16px;
+  }
+  .sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px}
+  h2{font-size:.95rem;font-weight:700}
+  .pad-pos{font-size:.7rem;color:var(--muted)}
+  .target{
+    display:inline-block;
+    font-size:.72rem;
+    color:var(--ok);
+    font-weight:600;
+    margin-bottom:10px;
+  }
+  .swatches{display:flex;gap:5px}
+  .sw{flex:1;text-align:center}
+  .sw .chip{
+    height:64px;
+    border-radius:8px;
+    border:1px solid rgba(0,0,0,.12);
+    position:relative;
+  }
+  .sw.ideal .chip{
+    outline:3px solid var(--ok);
+    outline-offset:2px;
+  }
+  .sw .val{
+    display:block;
+    font-size:.78rem;
+    font-weight:700;
+    margin-top:8px;
+    font-variant-numeric:tabular-nums;
+  }
+  .sw .lbl{
+    display:block;
+    font-size:.62rem;
+    color:var(--muted);
+    margin-top:1px;
+  }
+  .note{
+    font-size:.72rem;
+    color:var(--muted);
+    margin-top:10px;
+    line-height:1.45;
+  }
+
+  .disclaimer{
+    font-size:.72rem;
+    color:var(--muted);
+    line-height:1.5;
+    padding:0 4px;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>3 az 1-ben tesztcsík színskála</h1>
+  <p>Intex 29081 / Bestway FlowClear 58142 típusú csíkokhoz &middot; mezők a csík csúcsától lefelé</p>
+</header>
+
+<div class="howto">
+  <b>Használat:</b> mártsd be a csíkot 1–2 mp-re, tartsd vízszintesen, és <b>15 mp után azonnal</b> olvasd le. A zöld kerettel jelölt mezők az ideális tartományt mutatják. Természetes fénynél hasonlíts, ne lámpa alatt.
+</div>
+
+<section>
+  <div class="sec-head">
+    <h2>Szabad klór (ppm)</h2>
+    <span class="pad-pos">1. mező – a csík csúcsa</span>
+  </div>
+  <span class="target">Cél: 2–4 ppm</span>
+  <div class="swatches">
+    <div class="sw"><div class="chip" style="background:#f8f6ef"></div><span class="val">0</span><span class="lbl">nincs</span></div>
+    <div class="sw"><div class="chip" style="background:#f3dde6"></div><span class="val">0,5</span><span class="lbl">kevés</span></div>
+    <div class="sw"><div class="chip" style="background:#edc3d6"></div><span class="val">1</span><span class="lbl">alacsony</span></div>
+    <div class="sw ideal"><div class="chip" style="background:#e19cc4"></div><span class="val">2</span><span class="lbl">jó</span></div>
+    <div class="sw ideal"><div class="chip" style="background:#c672ab"></div><span class="val">4</span><span class="lbl">jó</span></div>
+    <div class="sw"><div class="chip" style="background:#8f4f8e"></div><span class="val">10</span><span class="lbl">magas</span></div>
+  </div>
+  <p class="note">Fehér mező = nincs klór, fertőtlenítés kell. Lila = túl sok, ne menj be, cserélj részvizet.</p>
+</section>
+
+<section>
+  <div class="sec-head">
+    <h2>pH</h2>
+    <span class="pad-pos">2. mező – középen</span>
+  </div>
+  <span class="target">Cél: 6,8–7,6 (ideálisan 7,2–7,6)</span>
+  <div class="swatches">
+    <div class="sw"><div class="chip" style="background:#f4d94d"></div><span class="val">6,2</span><span class="lbl">savas</span></div>
+    <div class="sw"><div class="chip" style="background:#f2c243"></div><span class="val">6,8</span><span class="lbl">határ</span></div>
+    <div class="sw ideal"><div class="chip" style="background:#ec9a3e"></div><span class="val">7,2</span><span class="lbl">jó</span></div>
+    <div class="sw ideal"><div class="chip" style="background:#e2763c"></div><span class="val">7,6</span><span class="lbl">jó</span></div>
+    <div class="sw"><div class="chip" style="background:#d05540"></div><span class="val">7,8</span><span class="lbl">magas</span></div>
+    <div class="sw"><div class="chip" style="background:#c24238"></div><span class="val">8,4</span><span class="lbl">lúgos</span></div>
+  </div>
+  <p class="note">Sárga = savas (pH Plus kell), piros = lúgos (pH Minus kell).</p>
+</section>
+
+<section>
+  <div class="sec-head">
+    <h2>Lúgosság / alkalinitás (ppm)</h2>
+    <span class="pad-pos">3. mező – a nyél felé</span>
+  </div>
+  <span class="target">Cél: 60–120 ppm</span>
+  <div class="swatches">
+    <div class="sw"><div class="chip" style="background:#f0ecb6"></div><span class="val">0</span><span class="lbl">nagyon alacsony</span></div>
+    <div class="sw"><div class="chip" style="background:#dbe094"></div><span class="val">40</span><span class="lbl">alacsony</span></div>
+    <div class="sw ideal"><div class="chip" style="background:#b2ca73"></div><span class="val">80</span><span class="lbl">jó</span></div>
+    <div class="sw ideal"><div class="chip" style="background:#7fb465"></div><span class="val">120</span><span class="lbl">jó</span></div>
+    <div class="sw"><div class="chip" style="background:#4f9359"></div><span class="val">180</span><span class="lbl">magas</span></div>
+    <div class="sw"><div class="chip" style="background:#2f7a64"></div><span class="val">240</span><span class="lbl">nagyon magas</span></div>
+  </div>
+  <p class="note">Ezt állítsd be először (Alka Plus / szódabikarbóna), csak utána a pH-t, végül a klórt.</p>
+</section>
+
+<p class="disclaimer">
+  A képernyők színvisszaadása eltér, ezért ez a skála tájékozódásra való, nem laborpontosságú.
+  Az irány viszont egyértelműen leolvasható róla (alacsony / jó / magas). Ha pontos érték kell,
+  az eredeti flakon skálája vagy egy csepptesztes készlet a mérvadó. A fényerőt húzd maximumra,
+  és kapcsold ki a True Tone / éjszakai módot összehasonlítás előtt.
+</p>
+</body>
+</html>
